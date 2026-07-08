@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="hero" style="background-image: url('{{ url_for('static', filename='img/hero_bg.png') }}');">
+    <div class="hero-overlay">
+        <h1>STEM-Elas</h1>
+        <p>Arquitetura Digital e a Desconstrução de Estereótipos na Matemática</p>
+        <p class="hero-subtitle">Um acervo vivo de biografias, descobertas e recursos educacionais para incentivar novas gerações de mulheres em STEM.</p>
+    </div>
+</section>
+
+<section class="container">
+    <h2 class="section-title">Acervo Biográfico</h2>
+    <div class="grid">
+        {% for m in matematicas %}
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/cientistas/' + m.id + '.png') }}" alt="{{ m.nome }}" class="card-img" onerror="this.src='https://via.placeholder.com/100?text=STEM'">
+            <div class="card-content">
+                <h3>{{ m.nome }}</h3>
+                <p class="tag">{{ m.periodo }}</p>
+                <p>{{ m.descricao }}</p>
+                <a href="{{ url_for('biografia', id=m.id) }}" class="btn">Explorar Contribuições</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

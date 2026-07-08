@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="container">
+    <h1 class="section-title">Repositório Multimídia</h1>
+    
+    <div class="grid">
+        <div class="card">
+            <div class="media-icon">📊</div>
+            <h3>Infográficos Interativos</h3>
+            <p>Visualize dados sobre a representatividade feminina na ciência. Dados do GEMAA/IESP-UERJ.</p>
+            <a href="https://gemaa.iesp.uerj.br/infografico/participacao-de-mulheres-na-ciencia/" target="_blank" class="btn">Visualizar</a>
+        </div>
+
+        <div class="card">
+            <div class="media-icon">📖</div>
+            <h3>Storytelling: Sophie Germain</h3>
+            <p>A história de como o pseudônimo "Antoine-Auguste Le Blanc" desafiou o sistema.</p>
+            <a href="{{ url_for('storytelling') }}" class="btn">Ler História</a>
+        </div>
+    </div>
+</section>
+
+<style>
+.media-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+</style>
+{% endblock %}

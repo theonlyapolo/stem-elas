@@ -1,0 +1,128 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="story-container">
+    <div class="story-header">
+        <h1>O Enigma de Le Blanc</h1>
+        <p class="subtitle">A vida secreta e a genialidade de Sophie Germain</p>
+    </div>
+
+    <div class="story-chapter" id="chapter1">
+        <div class="chapter-content">
+            <h2>I. O Refúgio na Biblioteca</h2>
+            <p>Paris, 1789. Enquanto as ruas fervilhavam com o início da Revolução Francesa, uma jovem de 13 anos chamada <strong>Sophie Germain</strong> encontrava um tipo diferente de revolução nas estantes da biblioteca de seu pai.</p>
+            <p>Lá, ela leu sobre a morte de Arquimedes, tão absorto em seus cálculos que nem percebeu a invasão de Siracusa. Sophie ficou fascinada: <em>"Que ciência seria essa, capaz de fazer alguém esquecer o medo da morte e o caos do mundo?"</em></p>
+            <blockquote class="story-quote">
+                "Se a matemática era tão fascinante a ponto de custar a vida de um gênio, ela deveria ser o meu destino."
+            </blockquote>
+        </div>
+    </div>
+
+    <div class="story-chapter" id="chapter2">
+        <div class="chapter-content">
+            <h2>II. Luzes na Escuridão</h2>
+            <p>Seus pais, porém, não compartilhavam do seu entusiasmo. Naquela época, acreditava-se que o estudo intenso das ciências exatas era prejudicial à saúde feminina. Eles confiscaram suas roupas, apagaram sua lareira e levaram suas velas para impedi-la de estudar à noite.</p>
+            <p>Mas Sophie não se rendeu. Ela esperava todos dormirem, enrolava-se em cobertores e estudava à luz de velas contrabandeadas. Certa manhã, seus pais a encontraram dormindo sobre a mesa, com a tinta congelada no tinteiro e o papel coberto de cálculos. Diante de tamanha determinação, eles finalmente cederam.</p>
+        </div>
+    </div>
+
+    <div class="story-chapter" id="chapter3">
+        <div class="chapter-content">
+            <h2>III. O Nascimento de "Monsieur Le Blanc"</h2>
+            <p>Em 1794, a École Polytechnique foi fundada, mas mulheres eram proibidas. Sophie não se deu por vencida. Ela assumiu a identidade de um ex-aluno que havia abandonado o curso: <strong>Antoine-Auguste Le Blanc</strong>.</p>
+            <p>Sob esse pseudônimo, ela recebia as notas das aulas e enviava seus próprios trabalhos para o grande matemático <strong>Joseph-Louis Lagrange</strong>. Impressionado com a genialidade de "Le Blanc", Lagrange solicitou um encontro. Imagine sua surpresa ao descobrir que o brilhante matemático era, na verdade, uma jovem autodidata.</p>
+        </div>
+    </div>
+
+    <div class="story-chapter" id="chapter4">
+        <div class="chapter-content">
+            <h2>IV. Correspondência com o "Príncipe"</h2>
+            <p>A ambição de Sophie a levou a escrever para <strong>Carl Friedrich Gauss</strong>, o maior matemático da época. Novamente como "M. Le Blanc", ela compartilhou descobertas sobre a Teoria dos Números que deixaram Gauss maravilhado.</p>
+            <p>A verdade só veio à tona durante as Guerras Napoleônicas. Temendo que Gauss tivesse o mesmo destino de Arquimedes, Sophie contatou um general amigo para protegê-lo. Quando Gauss soube quem era sua salvadora, escreveu:</p>
+            <blockquote class="story-quote">
+                "Quando uma mulher, por causa de seu sexo e nossos preconceitos, encontra obstáculos infinitamente maiores que os homens... e ainda assim penetra nos mistérios mais profundos, ela possui, sem dúvida, a coragem mais nobre e o gênio superior."
+            </blockquote>
+        </div>
+    </div>
+
+    <div class="story-chapter" id="chapter5">
+        <div class="chapter-content">
+            <h2>V. O Legado Imortal</h2>
+            <p>Sophie Germain nunca obteve um título oficial em vida. Em seu atestado de óbito, sua profissão foi registrada apenas como "rentista". No entanto, seu trabalho na teoria da elasticidade e seus avanços no Último Teorema de Fermat garantiram seu lugar na história.</p>
+            <p>Hoje, os <strong>Primos de Sophie Germain</strong> e as leis da elasticidade que ela ajudou a formular são pilares da ciência moderna. Ela provou que a mente humana não conhece fronteiras de gênero, apenas a sede infinita pelo conhecimento.</p>
+        </div>
+    </div>
+
+    <div class="story-footer">
+        <a href="{{ url_for('multimidia') }}" class="btn">Voltar para Multimídia</a>
+    </div>
+</section>
+
+<style>
+.story-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    background: #fffaf0; /* Tom de papel antigo */
+    color: #2c3e50;
+    box-shadow: 0 0 30px rgba(0,0,0,0.05);
+    line-height: 1.8;
+}
+
+.story-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.story-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: #1a252f;
+}
+
+.subtitle {
+    font-style: italic;
+    color: #7f8c8d;
+    font-size: 1.2rem;
+}
+
+.story-chapter {
+    margin-bottom: 6rem;
+    position: relative;
+}
+
+.story-chapter h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #c0392b;
+    border-bottom: 2px solid #f39c12;
+    display: inline-block;
+}
+
+.story-quote {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #fdf2e9;
+    border-left: 5px solid #e67e22;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #a04000;
+}
+
+.chapter-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.15rem;
+}
+
+.story-footer {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+    .story-header h1 { font-size: 2.5rem; }
+    .story-container { padding: 2rem 1rem; }
+}
+</style>
+{% endblock %}

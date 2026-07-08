@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="container">
+    <div class="bio-detail">
+        <h1>{{ m.nome }}</h1>
+        <p class="tag">{{ m.periodo }}</p>
+        <div class="content">
+            <h2>Contribuições e Trajetória</h2>
+            <p>{{ m.detalhes }}</p>
+            
+            {% if m.id == 'hypatia' %}
+            <div class="interactive-hint">
+                <h3>Simulação de Instrumentos</h3>
+                <p>Explore as simulações interativas do <strong>Astrolábio</strong> e do <strong>Hidrômetro</strong> em nosso <a href="{{ url_for('laboratorio') }}">Laboratório Interativo</a>. Veja como esses instrumentos revolucionários funcionavam!</p>
+            </div>
+            {% endif %}
+
+            {% if m.id == 'agnesi' %}
+            <div class="interactive-hint">
+                <h3>Curva de Agnesi no Laboratório</h3>
+                <p>Visualize e manipule a famosa <strong>Curva "Bruxa de Agnesi"</strong> em tempo real no nosso <a href="{{ url_for('laboratorio') }}">Laboratório Interativo</a>. Altere os parâmetros e observe como a curva se transforma!</p>
+            </div>
+            {% endif %}
+
+            {% if m.id == 'ada' %}
+            <div class="code-box">
+                <h3>Algoritmo de Ada (Versão Moderna)</h3>
+                <pre><code>
+# Representação visual do primeiro algoritmo
+def calcular_bernoulli(n):
+    # Lógica inspirada nas notas de Ada
+    print(f"Calculando números de Bernoulli para {n}...")
+    # ... transposição didática ...
+                </code></pre>
+            </div>
+            {% endif %}
+
+            {% if m.id == 'emmy' %}
+            <div class="interactive-hint">
+                <h3>Teorema de Noether no Laboratório</h3>
+                <p>Explore a visualização do <strong>Teorema de Noether</strong> sobre simetrias e leis de conservação no nosso <a href="{{ url_for('laboratorio') }}">Laboratório Interativo</a>. Compreenda a conexão entre simetria e conservação!</p>
+            </div>
+            {% endif %}
+        </div>
+        <a href="{{ url_for('index') }}" class="btn">Voltar ao Acervo</a>
+    </div>
+</section>
+
+<style>
+.bio-detail {
+    background: white;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.bio-detail h1 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.5rem;
+}
+.content {
+    margin: 2rem 0;
+}
+.code-box {
+    background: #2d3436;
+    color: #dfe6e9;
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+.interactive-hint {
+    background: #e1f5fe;
+    padding: 1.5rem;
+    border-left: 5px solid #03a9f4;
+    margin-top: 2rem;
+}
+.interactive-hint a {
+    color: #0277bd;
+    text-decoration: none;
+    font-weight: bold;
+}
+.interactive-hint a:hover {
+    text-decoration: underline;
+}
+</style>
+{% endblock %}
