@@ -197,7 +197,7 @@ nav {
 }
 
 footer {
-    background: var(--primary);
+    background: #721ca4;
     color: var(--white);
     text-align: center;
     padding: 3rem 0;
