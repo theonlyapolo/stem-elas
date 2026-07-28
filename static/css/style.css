@@ -166,6 +166,10 @@ nav {
     font-size: 1.4rem;
 }
 
+.card p {
+    color: #020303
+}
+
 .tag {
     display: inline-block;
     background: var(--secondary);
